@@ -25,4 +25,6 @@ color:gray
 
 .post_button{
     display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
 }
