@@ -1,12 +1,14 @@
 import React,{useState} from 'react';
 import { auth } from './firebase';
 import './Login.css';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const[password,setPassword]=useState("");
     const[name,setName]=useState("");
     const [profilePic, setProfilePic] = useState("");
+    const dispatch = useDispatch();
 
     const loginToApp=(e)=>{
         e.preventDefault();
@@ -22,7 +24,16 @@ const Login = () => {
             displayName:name,
             photoURL:profilePic
         })
+        .then(()=>{
+            dispatch(Login({
+                email:userAuth.user.email,
+                uid:userAuth.user.uid,
+                displayName:name,
+                photoURL:profilePic
+            }))
+        });
      })
+     .catch(error=>alert(error.message));
     };
     return (
         <div className="login">
