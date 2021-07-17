@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { auth } from './firebase';
 import './Login.css';
 import { useDispatch } from 'react-redux';
+import { login } from './features/userSlice';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const Login = () => {
             photoURL:profilePic
         })
         .then(()=>{
-            dispatch(Login({
+            dispatch(login({
                 email:userAuth.user.email,
                 uid:userAuth.user.uid,
                 displayName:name,
