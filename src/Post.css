@@ -22,3 +22,7 @@ color:gray
 .post_body > h2{
     font-size: 15px;
 }
+
+.post_button{
+    display: flex;
+}
