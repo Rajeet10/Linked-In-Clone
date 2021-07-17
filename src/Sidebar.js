@@ -31,7 +31,7 @@ const Sidebar = () => {
               <p>Recent</p>
               {recentItem("App developer")}
               {recentItem("React Js")}
-              {recentItem("Software Engineer")}
+              {recentItem("SoftwareEngineer")}
               {recentItem("Google")}
           </div>
         </div>

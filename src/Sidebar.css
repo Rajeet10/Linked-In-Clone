@@ -92,3 +92,13 @@ font-size: 12px;
    cursor: pointer;
    color:black
 }
+
+.sidebar_hash{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.sidebar_bottom >p{
+    font-size: 13px;
+    padding-bottom: 10px;
+}
