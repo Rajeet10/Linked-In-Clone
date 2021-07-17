@@ -13,7 +13,16 @@ const Login = () => {
         
     };
     const register=()=>{
-     
+     if(!name){
+         return alert("Please enter a full name!")
+     }
+     auth.createUserWithEmailAndPassword(email,password)
+     .then((userAuth)=>{
+        userAuth.user.updateProfile({
+            displayName:name,
+            photoURL:profilePic
+        })
+     })
     };
     return (
         <div className="login">
