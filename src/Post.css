@@ -20,6 +20,7 @@ color:gray
 }
 
 .post_body > h2{
+
     font-size: 15px;
 }
 
@@ -27,4 +28,8 @@ color:gray
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
+}
+
+avatar{
+    margin-top: 100px;
 }
