@@ -26,7 +26,8 @@ const Login = () => {
             photoURL:profilePic
         })
         .then(()=>{
-            dispatch(login({
+            dispatch(
+                login({
                 email:userAuth.user.email,
                 uid:userAuth.user.uid,
                 displayName:name,
