@@ -20,7 +20,7 @@ const Login = () => {
          return alert("Please enter a full name!")
      }
      auth.createUserWithEmailAndPassword(email,password)
-     .then((userAuth)=>{
+     .then((userAuth)=>{ 
         userAuth.user.updateProfile({
             displayName:name,
             photoURL:profilePic
@@ -31,10 +31,10 @@ const Login = () => {
                 uid:userAuth.user.uid,
                 displayName:name,
                 photoURL:profilePic
-            }))
+            })
+            );
         });
-     })
-     .catch(error=>alert(error));
+     }).catch(error=>alert(error));
     };
     return (
         <div className="login">
